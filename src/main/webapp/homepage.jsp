@@ -177,7 +177,7 @@
     <%
       UserSignUp user = (UserSignUp) session.getAttribute("user");
       int userID = user.getUserID();
-      String CHECK_USERS_SQL = "select * from post where  userid= " + "'"+ userID +"'order by   post_id  desc";
+      String CHECK_USERS_SQL = "select * from post where  userid= " + "'"+ userID +"'order by   post_id  degitsc";
       PreparedStatement stmt = null;
       try {
         stmt = DbConnection.INSTANCE.getConnection().prepareStatement(CHECK_USERS_SQL);
