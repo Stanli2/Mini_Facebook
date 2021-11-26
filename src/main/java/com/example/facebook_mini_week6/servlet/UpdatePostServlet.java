@@ -24,7 +24,6 @@ public class UpdatePostServlet extends HttpServlet {
         try {
         HttpSession httpSession = request.getSession();
 
-        //requests from the client
         String message = request.getParameter("message");
         int post_id = Integer.parseInt(request.getParameter("post_id"));
 

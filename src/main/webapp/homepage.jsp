@@ -177,7 +177,7 @@
     <%
       UserSignUp user = (UserSignUp) session.getAttribute("user");
       int userID = user.getUserID();
-      String CHECK_USERS_SQL = "select * from post where  userid= " + "'"+ userID +"'order by   post_id  degitsc";
+      String CHECK_USERS_SQL = "select * from post where  userid= " + "'"+ userID +"'order by   post_id  desc";
       PreparedStatement stmt = null;
       try {
         stmt = DbConnection.INSTANCE.getConnection().prepareStatement(CHECK_USERS_SQL);
@@ -189,7 +189,7 @@
                   "<img src=\"images/girl.jpg\" >" +
                   "</div>" +
                   "<div class=\"post-info\">" +
-                  "<p class=\"name\"> Olowofela Lanre</p>" +
+                  "<p class=\"name\"> Thomas Agada </p>" +
                   "<span class=\"time\">");
 
           //content of message
@@ -201,7 +201,7 @@
                   "</div>" +
                   "<div class=\"post-bottom\">" +
                   "<div class=\"action\">" +
-                  "<form  method=\"post\" action=\"test.html\">" +
+                  "<form  method=\"post\" action=\"${pageContext.request.contextPath}/UserSignInServlet\">" +
                   "<div class=\"test-btn\">" +
                   "<input type=\"hidden\" name=\"comment\" class=\"text-btn\">" +
                   "<input type=\"submit\" value=\"  Like  \" name=\"\" class=\"text-btn\">" +

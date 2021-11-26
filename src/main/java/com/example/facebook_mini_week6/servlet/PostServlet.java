@@ -26,8 +26,6 @@ public class PostServlet extends HttpServlet {
 
        String message = request.getParameter("message");
 
-//       String user_id = request.getParameter("user_id");
-//       int myuserId = Integer.parseInt(user_id);
        HttpSession httpSession = request.getSession();
 
        PostDao post = new PostDao(DbConnection.INSTANCE.getConnection());
